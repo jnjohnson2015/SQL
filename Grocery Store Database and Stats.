@@ -1,0 +1,28 @@
+This is the creation of the Grocery Inventory List where I'm creating columns, rows, and the primary key for the database. 
+
+
+create table inventory (id integer primary key, name text, price integer,quantity integer, aisle integer, rating integer);
+insert into inventory values(1,"oreos",5.99,37,3,5);
+insert into inventory values(2,"chips ahoy",3.99,52,3,5);
+insert into inventory values(3,"Fruit by the Foot",2.99,39,4,9);
+insert into inventory values(4,"Lays Original", 2.49,70,8,7);
+insert into inventory values(5,"Jiffy Cornbread", 1.48,40,7,7);
+insert into inventory values(6,"Betty Crocker Confetti Cake Mix",3.49,89,7,7);
+insert into inventory values(7,"Frosted Flakes", 4.78,102,7,8);
+insert into inventory values(8,"Fruity Pebbles", 4.86,98,7,7);
+insert into inventory values(9,"Domino Pure Cane Sugar", 2.46,98,3,10);
+insert into inventory values(10,"Party Pizza Combination",1.53,76,2,3);
+insert into inventory values(11,"Pizza Rolls",6.45,56,2,5);
+insert into inventory values(12,"Rainbow Popcicles",3.56,100,2,8);
+insert into inventory values(13,"Crinkle Cut Fries",4.49,65,2,8);
+insert into inventory values(14,"Orange Juice",3.39,78,9,9);
+insert into inventory values(15,"Fudge Bars",3.29,64,2,10);
+
+This statement selects all products from the database and sorts them by the aisle number.
+select * from inventory order by aisle;
+
+This statement gives the sum of all products within the database.
+select sum(price) from inventory;
+
+This statement allows us to inventory what is on each aisle.
+select name,quantity,aisle from inventory order by aisle desc;
